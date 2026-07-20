@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="L'Odyssée d'Homère, traduction de Leconte de L'Isle, dans une édition de lecture annotée.">
+    <title>L’Odyssée — édition annotée</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="eyebrow">Homère</p>
+            <h1>L’Odyssée</h1>
+            <p class="translator">Traduction de Leconte de L’Isle</p>
+            <div class="chapter-info" id="chapterInfo">Chant I</div>
+            <div class="chapter-nav">
+                <label for="chapterSelect">Aller au chant :</label>
+                <select id="chapterSelect" class="chapter-select">
+                    <option value="">Chargement des chants…</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="navigation top-nav" aria-label="Navigation supérieure">
+            <button id="prevPageTop" class="nav-btn" type="button" disabled>← Précédente</button>
+            <div class="page-indicator-group">
+                <div class="page-indicator" id="pageIndicatorTop">Page 4</div>
+                <div class="page-jump">
+                    <label class="sr-only" for="pageJumpInput">Numéro de page</label>
+                    <input type="number" id="pageJumpInput" class="page-jump-input" placeholder="Page" min="4" max="347">
+                    <button id="pageJumpBtn" class="jump-btn" type="button">Aller</button>
+                </div>
+            </div>
+            <button id="nextPageTop" class="nav-btn" type="button">Suivante →</button>
+        </div>
+
+        <main>
+            <article class="page-content" id="pageContent" aria-live="polite">
+                <div class="loading">Chargement de L’Odyssée…</div>
+            </article>
+        </main>
+
+        <footer>
+            <div class="navigation" aria-label="Navigation inférieure">
+                <button id="prevPage" class="nav-btn" type="button" disabled>← Précédente</button>
+                <div class="page-indicator" id="pageIndicator">Page 4</div>
+                <button id="nextPage" class="nav-btn" type="button">Suivante →</button>
+            </div>
+        </footer>
+
+        <aside class="note-popup" id="notePopup" role="dialog" aria-label="Annotation" aria-hidden="true">
+            <div class="note-content" id="noteContent"></div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
