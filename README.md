@@ -19,7 +19,7 @@ Le site propose les mêmes fonctions principales que le lecteur Moby Dick :
 - annotation cliquable, mise en évidence dans le texte ;
 - navigation au clavier avec les flèches gauche et droite.
 
-Une seule annotation de démonstration est présente pour le moment, sur le mot « Muse » au début du chant I.
+Le texte contient **390 annotations** réparties dans les 24 chants : personnages et lieux, formes grecques choisies par Leconte de L’Isle, coutumes, religion, épithètes homériques et éclairages sur les principales scènes du récit.
 
 ## Régénérer le texte
 
@@ -28,3 +28,11 @@ Le script `tools/extract_odyssee.py` permet de recréer `text_data/Odyssee.json`
 ```bash
 python3 tools/extract_odyssee.py "/chemin/vers/Homère_Odyssee.pdf" text_data/Odyssee.json
 ```
+
+L’extraction recrée le texte brut avec l’annotation initiale. Pour reconstruire ensuite l’ensemble de l’appareil de notes :
+
+```bash
+python3 tools/annotate_odyssee.py text_data/Odyssee.json text_data/Odyssee.json
+```
+
+Le script d’annotation est idempotent : on peut le relancer sans dupliquer les marqueurs.

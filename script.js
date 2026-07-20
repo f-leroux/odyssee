@@ -85,16 +85,6 @@ function displayPage() {
     [prevBtn, prevBtnTop].forEach((button) => { button.disabled = firstPage; });
     [nextBtn, nextBtnTop].forEach((button) => { button.disabled = lastPage; });
 
-    document.querySelectorAll('.annotated').forEach((element) => {
-        element.addEventListener('click', (event) => showNote(event, element));
-        element.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                showNote(event, element);
-            }
-        });
-    });
-
     hideNote();
     window.scrollTo({ top: 0, behavior: 'instant' });
     chapterSelect.value = String(page.chant);
@@ -165,6 +155,23 @@ prevBtn.addEventListener('click', () => goToPage(currentPageIndex - 1));
 prevBtnTop.addEventListener('click', () => goToPage(currentPageIndex - 1));
 nextBtn.addEventListener('click', () => goToPage(currentPageIndex + 1));
 nextBtnTop.addEventListener('click', () => goToPage(currentPageIndex + 1));
+
+// La délégation garde les annotations actives après chaque changement de page,
+// même si le contenu de l'article vient d'être entièrement remplacé.
+pageContent.addEventListener('click', (event) => {
+    const annotation = event.target.closest('.annotated');
+    if (annotation && pageContent.contains(annotation)) {
+        showNote(event, annotation);
+    }
+});
+
+pageContent.addEventListener('keydown', (event) => {
+    const annotation = event.target.closest('.annotated');
+    if (annotation && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault();
+        showNote(event, annotation);
+    }
+});
 
 chapterSelect.addEventListener('change', () => {
     const chant = Number(chapterSelect.value);
