@@ -19,7 +19,7 @@ Le site propose les mêmes fonctions principales que le lecteur Moby Dick :
 - annotation cliquable, mise en évidence dans le texte ;
 - navigation au clavier avec les flèches gauche et droite.
 
-Le texte contient **412 annotations** réparties dans les 24 chants : personnages et lieux, patronymiques et formes grecques choisies par Leconte de L’Isle, coutumes, religion, épithètes homériques et éclairages sur les principales scènes du récit. Les termes sont annotés dès leur première occurrence pertinente, même lorsque cela rend certaines pages plus denses.
+Le texte contient **298 annotations distinctes** réparties dans les 24 chants : personnages et lieux, patronymiques et formes grecques choisies par Leconte de L’Isle, coutumes, religion, épithètes homériques et éclairages sur les principales scènes du récit. Une entrée de glossaire n’est affichée qu’à sa première occurrence pertinente dans tout le livre ; elle n’est pas répétée à chaque chant. Certaines pages peuvent donc être plus denses que d’autres.
 
 ## Régénérer le texte
 
