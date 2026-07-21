@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Le choix de route entre Lesbos, Khios, Psyriè, Mimas et Géraistos</title>
+  <desc id="desc">Carte schématique de la mer Égée montrant les deux routes débattues au chant trois et la traversée choisie vers le sud de l'Eubée.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcecef"/>
+      <stop offset="1" stop-color="#c8e0e5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#214d58" flood-opacity=".18"/>
+    </filter>
+    <marker id="arrowChosen" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 9 4.5 0 9Z" fill="#245d68"/>
+    </marker>
+    <marker id="arrowOption" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 8 4 0 8Z" fill="#a76d33"/>
+    </marker>
+    <style>
+      .land { fill: #ead8b7; stroke: #9b7950; stroke-width: 2.2; }
+      .minor { fill: #dcc7a2; stroke: #aa8a62; stroke-width: 1.4; }
+      .label { fill: #26383e; font: 600 20px Georgia, serif; paint-order: stroke; stroke: #fffdf7; stroke-width: 5px; stroke-linejoin: round; }
+      .small { fill: #41575d; font: 16px Georgia, serif; paint-order: stroke; stroke: #fffdf7; stroke-width: 4px; stroke-linejoin: round; }
+      .region { fill: #6e644f; font: 700 16px system-ui, sans-serif; letter-spacing: .14em; }
+      .route-label { fill: #245d68; font: 700 16px system-ui, sans-serif; paint-order: stroke; stroke: #eef7f8; stroke-width: 5px; }
+      .legend { fill: #31464c; font: 15px system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="900" height="600" rx="18" fill="url(#sea)"/>
+  <text x="315" y="108" fill="#6b939c" font-family="Georgia, serif" font-size="28" font-style="italic" opacity=".75">mer Égée</text>
+
+  <!-- Grèce continentale, Eubée et côte ionienne : silhouettes schématiques. -->
+  <path class="land" d="M0 250 C38 266 54 298 74 331 C87 353 83 378 55 402 C35 420 21 454 0 472Z"/>
+  <path class="land" filter="url(#shadow)" d="M112 286 C139 305 157 337 169 366 C181 396 201 421 225 448 C235 461 224 489 202 518 C185 541 163 535 158 509 C153 480 142 461 127 438 C108 408 91 380 88 345 C86 321 94 300 112 286Z"/>
+  <path class="minor" d="M278 367 296 378 288 404 269 393Z"/>
+  <path class="minor" d="M329 335 346 346 338 367 321 355Z"/>
+  <path class="minor" d="M372 393 389 404 380 426 361 414Z"/>
+
+  <path class="land" d="M770 0 H900 V600 H820 C795 558 793 516 809 472 C820 441 806 408 779 385 C753 362 748 330 765 299 C784 267 785 233 771 205 C754 170 758 125 777 91 C790 66 786 30 770 0Z"/>
+
+  <!-- Lesbos -->
+  <path class="land" filter="url(#shadow)" d="M627 78 C654 60 686 65 700 84 C715 103 704 120 721 135 C737 148 720 174 693 178 C666 182 651 164 627 168 C606 171 589 152 598 133 C606 116 594 96 612 86Z"/>
+  <!-- Khios -->
+  <path class="land" filter="url(#shadow)" d="M594 254 C616 241 644 250 650 270 C656 291 644 310 653 332 C663 357 649 388 633 412 C618 433 591 423 588 400 C584 375 570 353 578 329 C584 310 572 281 594 254Z"/>
+  <!-- Psyriè / Psara -->
+  <path class="land" filter="url(#shadow)" d="M484 298 C499 288 518 297 520 311 C522 326 511 339 494 337 C480 335 473 310 484 298Z"/>
+
+  <circle cx="207" cy="505" r="6" fill="#9e3f36" stroke="#fffdf7" stroke-width="3"/>
+  <circle cx="755" cy="332" r="6" fill="#9e3f36" stroke="#fffdf7" stroke-width="3"/>
+  <circle cx="655" cy="126" r="6" fill="#245d68" stroke="#fffdf7" stroke-width="3"/>
+
+  <!-- Routes évoquées puis route retenue après le signe de Zeus. -->
+  <path d="M650 137 C590 191 532 248 501 297" fill="none" stroke="#a76d33" stroke-width="4" stroke-dasharray="10 9" marker-end="url(#arrowOption)"/>
+  <path d="M669 141 C720 191 727 258 752 323" fill="none" stroke="#a76d33" stroke-width="4" stroke-dasharray="10 9" marker-end="url(#arrowOption)"/>
+  <path d="M643 142 C552 216 390 326 211 497" fill="none" stroke="#245d68" stroke-width="7" marker-end="url(#arrowChosen)"/>
+
+  <text class="label" x="610" y="54">Lesbos</text>
+  <text class="label" x="554" y="459">Khios</text>
+  <text class="label" x="425" y="286">Psyriè</text>
+  <text class="small" x="434" y="356">(Psara)</text>
+  <text class="label" x="709" y="367">Mimas</text>
+  <text class="small" x="126" y="552">Géraistos</text>
+  <text class="small" x="78" y="271">Euboia</text>
+  <text class="region" x="785" y="72">IONIE</text>
+  <text class="route-label" x="330" y="244" transform="rotate(-32 330 244)">traversée retenue</text>
+
+  <g transform="translate(530 493)">
+    <rect width="340" height="82" rx="12" fill="#fffdf7" fill-opacity=".9" stroke="#b9cfd3"/>
+    <line x1="18" y1="25" x2="72" y2="25" stroke="#245d68" stroke-width="7"/>
+    <text class="legend" x="84" y="30">route indiquée par le présage</text>
+    <line x1="18" y1="57" x2="72" y2="57" stroke="#a76d33" stroke-width="4" stroke-dasharray="10 8"/>
+    <text class="legend" x="84" y="62">options débattues à Lesbos</text>
+  </g>
+  <text x="24" y="579" fill="#50686e" font-family="system-ui, sans-serif" font-size="13">Schéma indicatif : il montre les relations géographiques, non un tracé archéologiquement certain.</text>
+</svg>

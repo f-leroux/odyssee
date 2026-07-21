@@ -97,13 +97,15 @@ function showNote(event, element) {
     if (!noteHtml) return;
 
     noteContent.innerHTML = noteHtml;
+    const hasMap = Boolean(noteContent.querySelector('.annotation-map'));
+    notePopup.classList.toggle('has-map', hasMap);
     notePopup.classList.add('active');
     notePopup.setAttribute('aria-hidden', 'false');
 
     if (window.innerWidth <= 768) return;
 
     const rect = element.getBoundingClientRect();
-    const popupWidth = Math.min(420, window.innerWidth - 32);
+    const popupWidth = Math.min(hasMap ? 720 : 420, window.innerWidth - 32);
     notePopup.style.width = `${popupWidth}px`;
     notePopup.style.left = `${Math.max(16, Math.min(rect.left, window.innerWidth - popupWidth - 16))}px`;
 
@@ -117,6 +119,7 @@ function showNote(event, element) {
 
 function hideNote() {
     notePopup.classList.remove('active');
+    notePopup.classList.remove('has-map');
     notePopup.setAttribute('aria-hidden', 'true');
     notePopup.removeAttribute('style');
 }

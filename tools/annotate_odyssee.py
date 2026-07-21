@@ -262,6 +262,24 @@ EVENTS = [
     Event(3, "un triste retour aux Akhaiens", "Les <em>nostoi</em>, récits des retours après Troie, formaient un vaste cycle traditionnel. L’histoire d’Odysseus s’inscrit parmi ces destins divergents."),
     Event(3, "une génisse d'un an", "Le sacrifice suit une séquence précise : consécration, mise à mort, combustion de la part divine, partage et repas. Le rite relie communauté, mémoire et présence des dieux."),
     Event(3, "le cavalier Gérennien Nestôr", "Cette épithète associe Nestôr à Gérénia, lieu de Messénie. Les épithètes homériques identifient le personnage et s’insèrent dans le rythme du vers."),
+    Event(
+        3,
+        "Irions-nous par le nord de l'âpre Khios",
+        (
+            "À Lesbos, les chefs hésitent entre une route extérieure près de Psyriè "
+            "(l’actuelle Psara) et une route intérieure entre Khios et le cap Mimas, "
+            "sur la côte ionienne. Le présage les conduit finalement à travers la mer "
+            "ouverte jusqu’à Géraistos, port situé à l’extrémité sud de l’Euboia."
+            "<figure class='annotation-map'>"
+            "<a href='assets/carte-retour-egee.svg' target='_blank' rel='noopener noreferrer'>"
+            "<img src='assets/carte-retour-egee.svg' alt='Carte schématique du choix de route entre Lesbos, Khios, Psyriè, Mimas et Géraistos'>"
+            "</a>"
+            "<figcaption>Les traits pointillés montrent les deux options débattues ; le "
+            "trait bleu montre la traversée retenue après le signe de Zeus. Le tracé est "
+            "schématique, mais les positions relatives des lieux sont géographiques.</figcaption>"
+            "</figure>"
+        ),
+    ),
     Event(4, "un baume, le népenthès", "Le fameux <em>nèpenthès</em>, venu d’Égypte, suspend la douleur et les larmes. Le passage interroge le rapport entre récit, mémoire et oubli du traumatisme."),
     Event(4, "Vieillard de la mer", "Pour obtenir la vérité de Prôteus, il faut maintenir la prise malgré ses formes successives. La maîtrise physique devient une épreuve de constance interprétative."),
     Event(4, "se changea d'abord en un lion", "La série des métamorphoses de Prôteus a donné l’adjectif « protéiforme ». Ménélaos gagne le savoir en refusant de se laisser tromper par l’apparence."),
@@ -281,7 +299,25 @@ EVENTS = [
     Event(8, "pleurait, la tête cachée", "Odysseus pleure en secret à l’écoute de sa propre histoire. Le héros guerrier devient aussi l’auditeur vulnérable de la poésie qui le rend célèbre."),
     Event(8, "une pierre plus grande", "Provoqué par Euryalos, Odysseus réaffirme son identité héroïque par un lancer exceptionnel. L’exploit prépare la révélation verbale de son nom."),
     Event(8, "l'amour d'Arès et d'Aphroditè", "Le chant comique de l’adultère d’Arès et d’Aphroditè offre un contrepoint aux unions humaines. Hèphaistos y triomphe par l’intelligence technique, non par la force."),
-    Event(9, "je suis Odysseus Laertiade", "Après avoir longtemps gardé l’anonymat, le héros révèle son nom aux Phaiakiens. Cette déclaration ouvre le grand récit rétrospectif des errances."),
+    Event(
+        9,
+        "je suis Odysseus Laertiade",
+        (
+            "Après avoir longtemps gardé l’anonymat, le héros révèle son nom aux "
+            "Phaiakiens. Cette déclaration ouvre le grand récit rétrospectif des errances. "
+            "Une carte globale peut aider à suivre les épisodes, mais les identifications "
+            "des terres merveilleuses restent conjecturales."
+            "<figure class='annotation-map'>"
+            "<a href='assets/carte-voyages-butler.png' target='_blank' rel='noopener noreferrer'>"
+            "<img src='assets/carte-voyages-butler.png' alt='Carte historique des voyages d’Ulysse proposée par Samuel Butler en 1900'>"
+            "</a>"
+            "<figcaption>La reconstruction de Samuel Butler (1900) est une hypothèse "
+            "historique parmi d’autres, et non la géographie certaine du poème. "
+            "<a class='annotation-map-source' href='https://commons.wikimedia.org/wiki/File:Odyssey_(Butler)_Map.png' target='_blank' rel='noopener noreferrer'>"
+            "Carte du domaine public — Wikimedia Commons</a>.</figcaption>"
+            "</figure>"
+        ),
+    ),
     Event(9, "terre des kyklopes orgueilleux et sans lois", "Le récit juge les Kyklôpes à partir des institutions grecques : agriculture, assemblée, lois, navigation et hospitalité. Leur altérité est construite comme absence de vie civique."),
     Event(9, "mon nom est Personne", "Le jeu repose sur le grec <em>Outis</em>, « personne ». La ruse fonctionne parce que Polyphèmos transforme involontairement un nom propre en négation."),
     Event(9, "l'enfoncèrent dans l'oeil", "L’aveuglement inverse la force du géant par un savoir technique collectif : bois taillé, feu, levier et coordination."),

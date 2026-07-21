@@ -51,7 +51,12 @@ def clean_lines(lines: list[str]) -> str:
         if not current:
             current = line
         elif current.endswith("-") and re.match(r"^[a-zà-öø-ÿœæ]", line):
-            current = current[:-1] + line
+            # Dans ce PDF, les 38 coupures de ligne précédées d'un tiret sont
+            # toutes de vrais composés ou inversions (peut-être, lui-même,
+            # dis-moi, très-malheureux, etc.), et non des césures ajoutées par
+            # la mise en page. On recolle donc les lignes sans supprimer le
+            # tiret lexical.
+            current += line
         else:
             current += " " + line
 
